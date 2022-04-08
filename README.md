@@ -32,3 +32,17 @@ setAllowedOriginPatterns로 바꿔주면 된다.
 - 입장시에 입장이름이 안적히는 문제가 있었는데
 Controller에서 Message.Type을 JOIN으로 했기 때문이다.
 ENTER로 바꿔주면 그대로 전달 가능
+
+- Redis설정을 할때 의존성 추가부분이
+``` gradle
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    //embedded-redis
+    compile group: 'it.ozimov', name: 'embedded-redis', version: '0.7.2'
+```
+이라고 적힌 부분이 있지만
+
+``` gradle
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:2.6.3'
+    implementation group: 'it.ozimov', name: 'embedded-redis', version: '0.7.2'
+```
+다음과 같이 수정해서 사용해야한다.
