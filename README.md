@@ -46,3 +46,9 @@ ENTER로 바꿔주면 그대로 전달 가능
     implementation group: 'it.ozimov', name: 'embedded-redis', version: '0.7.2'
 ```
 다음과 같이 수정해서 사용해야한다.
+
+- Redis Subscribe부분에서 문제가 있다. 
+-> 저장소와의 연결 문제를 
+
+
+
