@@ -9,9 +9,11 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 @Service
 public class RedisPublisher {
+
     private final RedisTemplate<String, Object> redisTemplate;
-    // redis 발행 서비스 구현
-    public void publish(ChannelTopic topic, ChatMessage message){
+
+    public void publish(ChannelTopic topic, ChatMessage message) {
         redisTemplate.convertAndSend(topic.getTopic(), message);
     }
 }
+
