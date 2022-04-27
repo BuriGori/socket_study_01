@@ -48,7 +48,8 @@ ENTER로 바꿔주면 그대로 전달 가능
 다음과 같이 수정해서 사용해야한다.
 
 - Redis Subscribe부분에서 문제가 있다. 
--> 저장소와의 연결 문제를 
+-> 저장소와의 연결 문제를 해결 ✔ -> 경로 설정을 잘 해줘야 함.
 
-
-
+- JDK 11 버전 이후부터는 JAXB(java.xml.bind module) 에 대한 의존성을 JDK에서 제공하고 있지 않기 때문에
+jaxb 의존성을 추가해주면 된다.
+java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException 에러발생
