@@ -17,7 +17,9 @@ import java.util.*;
 public class ChatRoomRepository {
 
     private final RedisMessageListenerContainer redisMessageListener;
+
     private final RedisSubscriber redisSubscriber;
+
     private static final String CHAT_ROOMS = "CHAT_ROOM";
     private final RedisTemplate<String, Object> redisTemplate;
     private HashOperations<String, String, ChatRoom> opsHashChatRoom;
@@ -47,11 +49,10 @@ public class ChatRoomRepository {
     //채팅방 입장
     public void enterChatRoom(String roomId) {
         ChannelTopic topic = topics.get(roomId);
-        if (topic == null) {
+        if (topic == null)
             topic = new ChannelTopic(roomId);
-            redisMessageListener.addMessageListener(redisSubscriber, topic);
-            topics.put(roomId, topic);
-        }
+        redisMessageListener.addMessageListener(redisSubscriber, topic);
+        topics.put(roomId, topic);
     }
 
     public ChannelTopic getTopic(String roomId) {
