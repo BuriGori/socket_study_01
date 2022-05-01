@@ -53,3 +53,7 @@ ENTER로 바꿔주면 그대로 전달 가능
 - JDK 11 버전 이후부터는 JAXB(java.xml.bind module) 에 대한 의존성을 JDK에서 제공하고 있지 않기 때문에  
 jaxb 의존성을 추가해주면 된다.  
 java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException 에러발생
+
+
+- Profile 설정에서 문제
+application 파일을 나누어서 관리할 때 profile이 잘 변경되었는지 확인.
