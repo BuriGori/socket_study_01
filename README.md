@@ -57,3 +57,6 @@ java.lang.NoClassDefFoundError: javax/xml/bind/JAXBException 에러발생
 
 - Profile 설정에서 문제
 application 파일을 나누어서 관리할 때 profile이 잘 변경되었는지 확인.
+
+- STOMP 실제 구현
+실제로 STOMP를 구현할때, WebSocket을 연결하는 API, PUB/SUB에 대한 API와 Messaging 메소드를 관리하는 것이 중요하다.
